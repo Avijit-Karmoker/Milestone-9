@@ -1,0 +1,14 @@
+.review-product {
+  display: flex;
+}
+
+.review-item{
+    width: 70%;
+    margin-left: 15%;
+    border-right: 1px solid lightgray;
+}
+
+.review-cart {
+  width: 30%;
+  margin-left: 10px;
+}
