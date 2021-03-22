@@ -10,15 +10,28 @@
       background-color: black;
       line-height: 40px;
       font-size: 25px;
+      border: none;
 }
 
-nav a{
+.header nav a{
       color: #fff;
       text-decoration: none;
       margin-right: 20px;
-      padding: 3px 20px;
+      padding: 3px 20px 6px 20px;
 }
 
 nav a:hover{
       background-color: gray;
+}
+
+.header nav button:hover{
+      background-color: gray;
+}
+
+.header nav button{
+      background-color: black;
+      line-height: 40px;
+      font-size: 25px;
+      border: none;
+      color: #fff;
 }

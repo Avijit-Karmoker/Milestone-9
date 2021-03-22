@@ -8,8 +8,11 @@ import {
   getDatabaseCart,
 } from "../../utilities/databaseManager";
 import { Link } from "react-router-dom";
+import { CircularProgress } from "@material-ui/core";
 
 const Shop = () => {
+  document.title = "Shop";
+
   const first10 = fakeData.slice(0, 10);
   const [products] = useState(first10);
   const [cart, setCart] = useState([]);
@@ -45,6 +48,9 @@ const Shop = () => {
   return (
     <div className="twin-container">
       <div className="product-container">
+        {
+          products.length === 0 && <CircularProgress />
+        }
         {products.map((product) => (
           <Product
             showAddToCart={true}

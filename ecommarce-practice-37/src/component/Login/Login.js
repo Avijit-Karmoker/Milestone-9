@@ -11,6 +11,8 @@ import {
 } from "./LoginManager";
 
 function Login() {
+  document.title = "Login";
+
   let [newUser, setNewUser] = useState(false);
   let [user, setUser] = useState({
     isSignedIn: false,
@@ -76,6 +78,7 @@ function Login() {
       .then((response) => {
         handleResponse(response, true);
       });
+      event.preventDefault();
     }
 
     if (!newUser && user.email && user.password) {
@@ -91,7 +94,7 @@ function Login() {
       {user.isSignedIn ? (
         <button onClick={signOut}>Sign out</button>
       ) : (
-        <button onClick={googleSignIn}>Sign in</button>
+        <button onClick={googleSignIn}>Google Sign in</button>
       )}
       <br />
       <button onClick={fbSignIn}>Log in Using Facebook</button>

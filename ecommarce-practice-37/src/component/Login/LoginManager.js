@@ -70,9 +70,7 @@ export const handleSignOut = () => {
 };
 
 export const createUserWithEmailAndPassword = (name, email, password) => {
-  return firebase
-    .auth()
-    .createUserWithEmailAndPassword(email, password)
+  return firebase.auth().createUserWithEmailAndPassword(email, password)
     .then((res) => {
       const newUserInfo = res.user;
       newUserInfo.error = "";
